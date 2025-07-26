@@ -177,8 +177,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 #header .logo img:hover {
-  filter: brightness(0); /* This will make the image black on hover */
-  /* Alternative: filter: grayscale(100%) brightness(0); */
+  filter: brightness(0); 
+  
 }
 
 @media (max-width: 992px) {
@@ -411,62 +411,90 @@ h1, h2, h3, h4, h5, h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("../img/Hero-Landlan.png") no-repeat center center;
-  background-size: cover;  /* Add this line */
-  background-attachment: fixed;  /* Add this line for parallax effect */
+  background: url("../img/Hero-Landlan2.png") no-repeat center center;
+  background-size: cover;  
+  background-attachment: fixed;  
   position: relative;
 }
 
 #hero .hero-container {
   position: absolute;
-  bottom: 0;
+  bottom: 1;
   top: 0;
   left: 0;
   right: 0;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: column;
-  text-align: center;
-  padding: 0 15px;
+  flex-direction: row;
+  text-align: left;
+  padding-top: 100px;
+}
+
+#hero .hero-logo img {
+  width: 200px; 
+  height: auto;
 }
 
 #hero .hero-logo {
+  margin-top: 105px;
   margin-bottom: 30px;
-  filter: brightness(0) invert(1); /* Makes the image white */
-  transition: filter 0.9s ease; /* Smooth transition effect */
+  filter: brightness(0) invert(1); 
+  transition: filter 0.9s ease; 
 }
 
 #hero .hero-logo {
   margin-bottom: 30px;
   filter: brightness(0) invert(1);
   transition: all 0.9s ease;
-  transform: scale(1); /* Add initial scale */
+  transform: scale(1); 
 }
 
 #hero .hero-logo:hover {
   filter: none;
   filter: brightness(1.3);
-  transform: scale(1.3); /* Increase size by 20% on hover */
+  transform: scale(1.3); 
+}
+
+#hero .hero-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 #hero h1 {
-  margin: 0 0 15px 0;
-  font-size: 55px;
-  font-weight: 500;
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 40px ;
+  font-weight: 600;
   line-height: 56px;
   color: #fff;
+  text-shadow: #1f1f1f 5px 5px px;
 }
 
 #hero h2 {
-  color: #fbdba4;
+  color: #fff;
+  margin-left: 43px ;
   margin-bottom: 30px;
-  font-size: 25px;
-  font-weight: 400;
-  /* text-transform: uppercase; */
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+#hero h5 {
+  color: #fff;
+  margin-top: 100px;
+  margin-left: 43px;
+  margin-right: 15px;
+  font-style: italic;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-align: right;
 }
 
 #hero .btn-get-started {
+  position: absolute;
+  left: 44%;
+  top: 300px; 
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -474,10 +502,10 @@ h1, h2, h3, h4, h5, h6 {
   letter-spacing: 1px;
   display: inline-block;
   padding: 14px 30px;
+  border:  #7cc576 solid 2px;
   border-radius: 3px;
   margin: 10px;
   color: #fff;
-  background: #7cc576;
 }
 
 #hero .btn-get-started:hover {
@@ -486,19 +514,84 @@ h1, h2, h3, h4, h5, h6 {
   color: #7cc576;
 }
 
-@media (min-width: 1024px) {
-  #hero {
-    background-attachment: fixed;
+
+@media (max-width: 1024px) {
+  #hero .hero-container {
+    flex-direction: column;
+    padding-top: 60px;
+    text-align: center;
+  }
+
+  #hero .hero-logo {
+    margin-top: 5px;
+    margin-bottom: 2x;
+  }
+
+  #hero h1, #hero h2, #hero h5 {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+}
+
+/* 768px and below (tablet portrait) */
+@media (max-width: 768px) {
+  
+
+  #hero .hero-logo img {
+    width: 150px;
+  }
+
+  #hero h1 {
+    font-size: 60px !important; 
+    margin-top: 1px;
+  }
+
+  #hero h2 {
+    font-size: 25px !important;
+    margin-top: -30px;
+  }
+
+  #hero h5 {
+    font-size: 11px !important;
+    margin-top: 10px;
+    text-align: center;
+  }
+
+  #hero .btn-get-started {
+    top: 400px;
+    padding: 12px 24px;
+    font-size: 14px;
   }
 }
 
-@media (max-width: 768px) {
-  #hero h1 {
-    font-size: 28px;
-    line-height: 36px;
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+  #hero .hero-container {
+    padding-top: 40px;
   }
+
+  #hero .hero-logo img {
+    width: 120px;
+  }
+
+  #hero h1 {
+    font-size: 22px;
+  }
+
   #hero h2 {
-    line-height: 22px;
+    font-size: 18px;
+  }
+
+  #hero h5 {
+    font-size: 14px;
+    margin-top: 20px;
+  }
+
+  #hero .btn-get-started {
+    top: 420px;
+    padding: 10px 20px;
+    font-size: 12px;
   }
 }
 
@@ -1801,3 +1894,44 @@ section {
   font-size: 13px;
   padding-top: 5px;
 }
+
+/*--------------------------------------------------------------
+# Scroll Indicator
+--------------------------------------------------------------*/
+
+  .scroll-indicator {
+    position: absolute;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    color: #fff;
+    font-size: 36px;
+    text-decoration: none;
+    opacity: 0.7;
+  }
+
+  .scroll-indicator:hover {
+    color: #7cc576; 
+    opacity: 1;    
+    transition: color 0.3s ease, opacity 0.3s ease;
+  }
+
+  .scroll-indicator:focus,
+  .scroll-indicator:active {
+    color: #fff;
+    outline: none;
+    box-shadow: none;
+  }
+
+  @keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+  }
