@@ -1297,7 +1297,7 @@ section {
   color: #888888;
 }
 
-.team .member:hover .social {
+#team .member:hover .social {
   bottom: 0;
   opacity: 1;
   transition: bottom ease-in-out 0.4s;

@@ -44,6 +44,45 @@
       letter-spacing: -0.5px;
       font-size: 72px;
     }
+
+    .btn-buy.disabled {
+      background: #cccccc;
+      color: #4f4f4f;
+      cursor: not-allowed;
+      pointer-events: none;
+      opacity: 0.6;     
+    }
+
+    .member-info h4 {
+    position: relative;
+    display: inline-block;
+    transition: color 0.3s ease;
+    }
+
+    .member-info h4:hover {
+        color: #5cb874;  /* This is the green color used in your website */
+        cursor: pointer;
+    }
+
+    .member-info a {
+        text-decoration: none;
+        color: inherit;
+    }
+
+    .member-info a:hover {
+        text-decoration: none;
+    }
+
+    .map-container {
+        width: 100%;
+        border-radius: 8px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .map-container iframe {
+        display: block;
+    }
   </style>
 
   
@@ -83,7 +122,7 @@
           <li><a class="nav-link scrollto " href="#portfolio">Listings</a></li>
           <li><a class="nav-link scrollto" href="#team">Reports</a></li>
           <li><a class="nav-link scrollto" href="#pricing">Projects</a></li>
-          <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
+          <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
               <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-right"></i></a>
@@ -99,7 +138,7 @@
               <li><a href="#">Drop Down 3</a></li>
               <li><a href="#">Drop Down 4</a></li>
             </ul>
-          </li>
+          </li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
@@ -315,14 +354,17 @@
           <h2>Listings</h2>
           <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p>
         </div>
-
+        
+        <!-- card = Residential
+        app = Commercial
+        web = Lots -->
         <div class="row" data-aos="fade-up" data-aos-delay="100">
           <div class="col-lg-12 d-flex justify-content-center">
             <ul id="portfolio-flters">
               <li data-filter="*" class="filter-active">All</li>
-              <li data-filter=".filter-app">App</li>
-              <li data-filter=".filter-card">Card</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-app">Residential</li>
+              <li data-filter=".filter-card">Commercial</li>
+              <li data-filter=".filter-web">Lots</li>
             </ul>
           </div>
         </div>
@@ -331,26 +373,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Listings/1.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 1</h4>
-                <p>App</p>
+                <h4>Row Houses.</h4>
+                <p>KC Homes Subdivision </p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Listings/1.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Row Houses: KC Homes Subdivision"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -359,40 +387,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Listings/2.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 2</h4>
-                <p>App</p>
+                <h4>Duplex Houses.</h4>
+                <p>KC Homes Subdivision</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Card 2</h4>
-                <p>Card</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
-                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
-            <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
-              <div class="portfolio-info">
-                <h4>Web 2</h4>
-                <p>Web</p>
-                <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Listings/2.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Duplex: KC Homes Subdivision"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -401,12 +401,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-app">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Listings/3.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>App 3</h4>
-                <p>App</p>
+                <h4>Deluxe Duplex.</h4>
+                <p>KC Homes Subdivision</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Listings/3.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Deluxe Duplex: KC Homes Subdivision"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -415,12 +415,12 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Listings/4.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 1</h4>
-                <p>Card</p>
+                <h4>Plain House</h4>
+                <p>KC Homes Subdivision</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Listings/4.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Plain Houses: KC Homes Subdivision"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -429,12 +429,26 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-card">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Listings/5.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Card 3</h4>
-                <p>Card</p>
+                <h4>Condo Unit</h4>
+                <p>Aspire Tower, Libis, Quezon City</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Listings/5.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Condo Unit: Aspire Tower, Libis, Quezon City"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/Listings/6.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>2-Bedroom Condo Unit</h4>
+                <p>Sorrento Oasis, Pasig City</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/Listings/2-bedroom.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="2-Bedroom Condo Unit: Sorrento Oasis, Pasig City"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -443,12 +457,40 @@
 
           <div class="col-lg-4 col-md-6 portfolio-item filter-web">
             <div class="portfolio-wrap">
-              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <img src="assets/img/Listings/7.png" class="img-fluid" alt="">
               <div class="portfolio-info">
-                <h4>Web 3</h4>
-                <p>Web</p>
+                <h4>Beach Resort</h4>
+                <p>Mabini Batangas</p>
                 <div class="portfolio-links">
-                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="assets/img/Listings/7.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Beach Resort: Mabini Batangas"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/Listings/8.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Beach Resort</h4>
+                <p>Mabini Batangas</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/Listings/8.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Beach Resort: Mabini Batangas"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/Listings/9.png" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Beach Resort</h4>
+                <p>Mabini Batangas</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/Listings/9.png" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Beach Resort: Mabini Batangas"><i class="bx bx-plus"></i></a>
                   <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
               </div>
@@ -473,10 +515,10 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                  Magkano ba ang downpayment? Ang ganda ng mga properties niyo! Sobrang saya saya ko na nakabili ako dito sa Landlan Realty & Development. Ang ganda ng mga houses at lots nila.
                 </p>
                 <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                <h3>Saul Goodman</h3>
+                <h3>Pablo Landicho</h3>
                 <h4>Ceo &amp; Founder</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -484,10 +526,10 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                  Ganda naman nito! Sobrang ganda ng mga properties niyo. Ang saya saya ko na nakabili ako dito sa Landlan Realty & Development.
                 </p>
                 <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
-                <h3>Sara Wilsson</h3>
+                <h3>Honey-lyn Mejia</h3>
                 <h4>Designer</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -495,10 +537,10 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                 Ang ganda ng mga properties niyo! Sobrang saya ko na nakabili ako dito sa Landlan Realty & Development. Ang ganda ng mga houses at lots nila.    
                 </p>
                 <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
-                <h3>Jena Karlis</h3>
+                <h3>Rachelle Mercado</h3>
                 <h4>Store Owner</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -506,10 +548,10 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                  Sobrang Lupet Grabe!
                 </p>
                 <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
-                <h3>Matt Brandon</h3>
+                <h3>EJ Landicho</h3>
                 <h4>Freelancer</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -517,10 +559,10 @@
             <div class="swiper-slide">
               <div class="testimonial-item">
                 <p>
-                  Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
+                  Ang galing ng architect nito! Ang ganda ng mga designs at properties nila. Sobrang saya ko na nakabili ako dito sa Landlan Realty & Development.
                 </p>
                 <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
-                <h3>John Larson</h3>
+                <h3>Kevin Nogales</h3>
                 <h4>Entrepreneur</h4>
               </div>
             </div><!-- End testimonial item -->
@@ -574,7 +616,7 @@
       <div class="container">
 
         <div class="section-title" data-aos="fade-up" data-aos-mirror="true">
-          <h2>Reports</h2>
+          <h2>Featured Reports</h2>
           <p>Magnam dolores commodi suscipit eius consequatur ex aliquid fuga eum quidem</p>
         </div>
 
@@ -583,16 +625,18 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in">
               <div class="member-img">
-                <img src="assets/img/reports/reports-1.png" class="img-fluid" alt="">
-                <div class="social">
+                <img src="assets/img/reports/blog1/3.png" class="img-fluid" alt="">
+                <!-- <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                </div> -->
               </div>
               <div class="member-info">
-                <h4>PAGIBIG Fund Accreditation</h4>
+                <h4>
+                <a href="blogpost1.html">PAGIBIG Fund Accreditation</a>  
+                </h4>
                 <span>July 11, 2025</span>
                 <p>Animi est delectus alias quam repellendus nihil nobis dolor. Est sapiente occaecati et dolore. Omnis aut ut nesciunt explicabo qui. Eius nam deleniti ut omnis</p>
               </div>
@@ -602,16 +646,16 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="100">
               <div class="member-img">
-                <img src="assets/img/reports/reports-2.jpg" class="img-fluid" alt="">
-                <div class="social">
+                <img src="assets/img/reports/blog1/1.png" class="img-fluid" alt="">
+                <!-- <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                </div> -->
               </div>
               <div class="member-info">
-                <h4>BARRM Board of Investment Granting</h4>
+                <h4><a href="#">Board of Investment Granting</a></h4>
                 <span>July 28, 2025</span>
                 <p>Aspernatur iste esse aliquam enim et corporis. Molestiae voluptatem aut eligendi quis aut. Libero vel amet voluptatem eos rerum non doloremque</p>
               </div>
@@ -621,16 +665,16 @@
           <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
             <div class="member" data-aos="zoom-in" data-aos-delay="200">
               <div class="member-img">
-                <img src="assets/img/reports/reports-3.png" class="img-fluid" alt="">
-                <div class="social">
+                <img src="assets/img/reports/blog1/2.png" class="img-fluid" alt="">
+                <!-- <div class="social">
                   <a href=""><i class="bi bi-twitter"></i></a>
                   <a href=""><i class="bi bi-facebook"></i></a>
                   <a href=""><i class="bi bi-instagram"></i></a>
                   <a href=""><i class="bi bi-linkedin"></i></a>
-                </div>
+                </div> -->
               </div>
               <div class="member-info">
-                <h4>Bangsamoro Board of Investment Ocular Inspection</h4>
+                <h4><a href="#">Board of Investment Ocular Inspection</a></h4>
                 <span>July 15, 2025</span>
                 <p>Ut enim possimus nihil cupiditate beatae. Veniam facere quae non qui necessitatibus rerum eos vero. Maxime sit sunt quo dolor autem est qui quaerat</p>
               </div>
@@ -661,153 +705,153 @@
 
           <div class="swiper-slide">
             <div class="box bg-1" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Free</h3>
-              <h4><sup>$</sup>0<span> / month</span></h4>
-              <ul>
+              <h3>Datu Odin Sinsuat, Maguindanao</h3>
+              <h4 style="color: aliceblue;">KC Homes Subdivision</h4>
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li class="na">Pharetra massa</li>
                 <li class="na">Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">View</a>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="box recommended bg-4" data-aos="zoom-in">
-              <h3>Business</h3>
-              <h4><sup>$</sup>19<span> / month</span></h4>
-              <ul>
+              <h3>Datu Odin Sinsuat, Maguindanao</h3>
+              <h4 style="color: aliceblue;">KC Homes Subdivision</h4>
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li class="na">Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">View</a>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="box bg-2" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
+              <h3>Datu Odin Sinsuat, Maguindanao</h3>
+              <h4 style="color: aliceblue;">KC Homes Subdivision</h4>
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">View</a>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="box bg-3" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
+              <h3>Datu Odin Sinsuat, Maguindanao</h3>
+              <h4 style="color: aliceblue;">KC Homes Subdivision</h4>
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">View</a>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="box bg-5" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
+              <h3>Datu Odin Sinsuat, Maguindanao</h3>
+              <h4 style="color: aliceblue;">KC Homes Subdivision</h4>
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">View</a>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
             <div class="box bg-6" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
+              <h3>Datu Odin Sinsuat, Maguindanao Del</h3>
+              <h4 style="color: aliceblue;">KC Homes Subdivision</h4>
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy">View</a>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
+            <div class="box bg-1" data-aos="zoom-in" data-aos-delay="100">
+              <h3>Coming Soon!</h3>
+              <!-- <h4><sup>$</sup>29<span> / month</span></h4> -->
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy disabled">Coming soon</a>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
-              <ul>
+            <div class="box bg-2" data-aos="zoom-in" data-aos-delay="100">
+              <h3>Coming Soon!</h3>
+              <!-- <h4><sup>$</sup>29<span> / month</span></h4> -->
+              <!-- <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy disabled">Coming soon</a>
               </div>
             </div>
           </div>
 
           <div class="swiper-slide">
-            <div class="box" data-aos="zoom-in" data-aos-delay="100">
-              <h3>Developer</h3>
-              <h4><sup>$</sup>29<span> / month</span></h4>
+            <div class="box bg-5" data-aos="zoom-in" data-aos-delay="100">
+              <h3>Coming Soon!</h3>
+              <!-- <h4><sup>$</sup>29<span> / month</span></h4>
               <ul>
                 <li>Aida dere</li>
                 <li>Nec feugiat nisl</li>
                 <li>Nulla at volutpat dola</li>
                 <li>Pharetra massa</li>
                 <li>Massa ultricies mi</li>
-              </ul>
+              </ul> -->
               <div class="btn-wrap">
-                <a href="#" class="btn-buy">Buy Now</a>
+                <a href="#" class="btn-buy disabled">Coming soon</a>
               </div>
             </div>
           </div>
@@ -907,19 +951,19 @@
               <div class="address">
                 <i class="bi bi-geo-alt"></i>
                 <h4>Location:</h4>
-                <p>A108 Adam Street,<br>New York, NY 535022</p>
+                <p>Sinsuat Avenue,<br>Maguindanao Del Norte</p>
               </div>
 
               <div class="email">
                 <i class="bi bi-envelope"></i>
                 <h4>Email:</h4>
-                <p>info@example.com</p>
+                <p>landlanrealtydevelopment@gmail.com</p>
               </div>
 
               <div class="phone">
                 <i class="bi bi-phone"></i>
                 <h4>Call:</h4>
-                <p>+1 5589 55488 55s</p>
+                <p>064-429-4062</p>
               </div>
 
             </div>
@@ -928,7 +972,7 @@
 
           <div class="col-lg-8 mt-5 mt-lg-0">
 
-            <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-left">
+            <!-- <form action="forms/contact.php" method="post" role="form" class="php-email-form" data-aos="fade-left">
               <div class="row">
                 <div class="col-md-6 form-group">
                   <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
@@ -949,8 +993,18 @@
                 <div class="sent-message">Your message has been sent. Thank you!</div>
               </div>
               <div class="text-center"><button type="submit">Send Message</button></div>
-            </form>
-
+            </form> -->
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d384.18999185722055!2d124.24006878810111!3d7.203274598865627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3256398871ebe9c9%3A0x126e3675c127314b!2s89.3%20Brigada%20News%20FM%20Cotabato%20City!5e0!3m2!1sen!2sph!4v1754397728791!5m2!1sen!2sph"
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
           </div>
 
         </div>
