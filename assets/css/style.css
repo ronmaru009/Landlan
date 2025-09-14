@@ -1549,6 +1549,7 @@ section {
 /* --------------------------------------------------------------
 Projects Section Background Images
 ---------------------------------------------------------------*/
+/* Norma */
 .bg-1 {
   background: url("../img/projects/kc-homes-1.png");
 }
@@ -1557,6 +1558,7 @@ Projects Section Background Images
   background-image: url("../img/projects/kc-homes-2.png");
 }
 
+/* first */
 .bg-3 {
   background-image: url("../img/projects/kc-homes-3.png");
 }
@@ -1565,10 +1567,12 @@ Projects Section Background Images
   background-image: url("../img/projects/kc-homes-4.png");
 }
 
+/* Janeer Duplex House Type */
 .bg-5 {
   background-image: url("../img/projects/kc-homes-5.png");
 }
 
+/* Hassir Rowhouse */
 .bg-6 {
   background-image: url("../img/projects/kc-homes-6.png");
 }
